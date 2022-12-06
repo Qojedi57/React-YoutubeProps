@@ -69,7 +69,8 @@ function App() {
     }
   ];
  return (
-   <div className="app-container">
+  <div className="app-container">
+    <WelcomeComponent name="Eddie"/> 
     <YoutubeComponent thumbnailImg="https://via.placeholder.com/600x400"
     views={1000}
     videoTitle="Why a cheeseburger?"
@@ -104,56 +105,32 @@ function isOdd(i){
 }
 
 //Old school
-class WelcomeComponent extends React.Component {
-  constructor(){
-    // State here
-    this.state = {
+// class WelcomeComponent extends React.Component {
+//   constructor(){
+//     // State here
+//     this.state = {
 
-    }
-  }
+//     }
+//   }
 
-  componentDidMount(){
-    //Api call
-  }
+//   componentDidMount(){
+//     //Api call
+//   }
 
-  componentDidUpdate(){
-    //when props or state changes
-  }
+//   componentDidUpdate(){
+//     //when props or state changes
+//   }
 
-  componentWillUnmount(){
-    //What to do when removed
-  }
+//   componentWillUnmount(){
+//     //What to do when removed
+//   }
 
-  render(){
-    return (
-      <div>{this.props.whqjwhedlk}</div>
-    )
-  }
-}
-// New school
-function WelcomeComponent(props){
-  return (
-    <div>{props.wjhqkljhwjskhd}</div>
-  )
-}
-
-function WelcomeComponent(props){ //name
-  console.log(props.name) //What is printed here
-  // if(props.name){
-  //   return (
-  //     <div>Welcome, {props.name}</div>
-  //   )
-  // } else {
-  //   return (
-  //     <div>There is no name available</div>
-  //   )
-  // }
-  return (
-    <div>
-      {props.name ? `Welcome, ${props.name}` : "There is no name available"}
-    </div>
-  )
-}
+//   render(){
+//     return (
+//       <div>{this.props.whqjwhedlk}</div>
+//     )
+//   }
+// }
 
 function WelcomeComponent(props){ //name
   console.log(props.name) //What is printed here
@@ -184,46 +161,46 @@ let sampleData = [
   }
 ]
 
-return (
-    <div>
-      {
-        sampleData.map(data => (
-          <div>
-            {
-//Nested Ternary Operator
-              data.title ? <div>{data.title}</div> : data.description ? <div>{data.description}</div> : <div></div>
-            }
-          </div>
-        ))
-      }
-    </div>
-  )
+// return (
+//     <div>
+//       {
+//         sampleData.map(data => (
+//           <div>
+//             {
+// //Nested Ternary Operator
+//               data.title ? <div>{data.title}</div> : data.description ? <div>{data.description}</div> : <div></div>
+//             }
+//           </div>
+//         ))
+//       }
+//     </div>
+//   )
 
-  //Fragments
-  return (
-    <Fragment>
-      {/* <div>Div one</div>
-      <div>Div two</div> */}
-      {
-        sampleData.map(data => (
-          <div>{data.title}</div>
-        ))
-      }
-    </Fragment>
-  )
+//   //Fragments
+//   return (
+//     <Fragment>
+//       {/* <div>Div one</div>
+//       <div>Div two</div> */}
+//       {
+//         sampleData.map(data => (
+//           <div>{data.title}</div>
+//         ))
+//       }
+//     </Fragment>
+//   )
 
-  //Shorthand
-  return (
-    <>
-      {/* <div>Div one</div>
-      <div>Div two</div> */}
-      {
-        sampleData.map(data => (
-          <div>{data.title}</div>
-        ))
-      }
-    </>
-  )
+//   //Shorthand
+//   return (
+//     <>
+//       {/* <div>Div one</div>
+//       <div>Div two</div> */}
+//       {
+//         sampleData.map(data => (
+//           <div>{data.title}</div>
+//         ))
+//       }
+//     </>
+//   )
 
 
 export default App
